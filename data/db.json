@@ -1,0 +1,26 @@
+{
+  "japan": [
+    {
+      "title": "Toyama",
+      "title-jp": "富山市",
+      "prefecture": "Toyama",
+      "island": "Honsiu",
+      "previewImg": "",
+      "images": [""],
+      "famousFor": [
+        { "name": "hotaruika", "desc": "japanese octopus", "img": "" }
+      ],
+      "about": "",
+      "whenBestToVisit": "All seasons",
+      "favourite": false,
+      "comments": [
+        {
+          "date": "12-05-2024",
+          "author": "Jimmy",
+          "content": "Great place to visit!",
+          "id": ""
+        }
+      ]
+    }
+  ]
+}
