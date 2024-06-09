@@ -1,24 +1,56 @@
 {
   "japan": [
     {
+      "id": 1,
       "title": "Toyama",
       "title-jp": "富山市",
       "prefecture": "Toyama",
       "island": "Honsiu",
-      "previewImg": "",
       "images": [""],
       "famousFor": [
-        { "name": "hotaruika", "desc": "japanese octopus", "img": "" }
+        {
+          "name": "hotaruika",
+          "desc": "japanese octopus",
+          "img": ""
+        }
       ],
       "about": "",
       "whenBestToVisit": "All seasons",
       "favourite": false,
+      "tags": ["honsiu", "Toyama"],
       "comments": [
         {
           "date": "12-05-2024",
           "author": "Jimmy",
           "content": "Great place to visit!",
-          "id": ""
+          "id": "feh7iw3h2ujebvjd"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Nakasendo Samurai Trail",
+      "title-jp": "",
+      "prefecture": "Tokyo",
+      "island": "",
+      "images": [""],
+      "famousFor": [
+        {
+          "name": "85km trail",
+          "desc": "",
+          "img": ""
+        }
+      ],
+      "about": "The cobblestone roads of the historic Nakasendo Route and the quaint Edo period (1603-1868) post towns of the Kiso Valley will make you feel like you have taken a step back in time to the age of the samurai.",
+      "whenBestToVisit": "All seasons",
+      "favourite": false,
+      "tags": ["hiking", "trail"],
+      "comments": [
+        {
+          "date": "14-05-2024",
+          "author": "Alison",
+          "content": "Worth every step taken!",
+          "id": "ccedaiklsc19ed"
         }
       ]
     }

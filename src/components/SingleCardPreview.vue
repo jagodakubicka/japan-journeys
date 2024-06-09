@@ -1,9 +1,13 @@
 <template>
-  <div>Single Card Preview</div>
+  <div class="card">
+    <div>{{ place.title }}</div>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['place'],
+};
 </script>
 
 <style scoped></style>
