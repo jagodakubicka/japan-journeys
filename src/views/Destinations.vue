@@ -1,10 +1,12 @@
 <template>
   <br /><br /><br />
-  <div class="destinations">
-    <div v-for="place in places" :key="place.id">
+  <div v-if="error">{{ error }}</div>
+  <div v-if="places.length" class="destinations cards-list">
+    <div class="cards-list__item" v-for="place in places" :key="place.id">
       <SingleCardPreview :place="place" />
     </div>
   </div>
+  <div v-else>Loading...</div>
 </template>
 
 <script>
@@ -21,3 +23,22 @@ export default {
   },
 };
 </script>
+
+<style>
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.cards-list__item:nth-child(even) {
+  transform: translateY(0);
+}
+
+@media (min-width: 678px) {
+  .cards-list__item:nth-child(even) {
+    transform: translateY(-1.5rem);
+  }
+}
+</style>

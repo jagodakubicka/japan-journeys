@@ -30,12 +30,38 @@
       adipisci, dolore distinctio atque sequi cumque necessitatibus repellat id!
     </p>
   </div>
+  <h2>Top Ranked</h2>
+  <div v-if="error">{{ error }}</div>
+  <div v-if="favouritePlaces.length" class="cards-list">
+    <div
+      class="cards-list__item"
+      v-for="place in favouritePlaces"
+      :key="place.id">
+      <SingleCardPreview :place="place" />
+    </div>
+  </div>
+  <div v-else>Loading...</div>
 </template>
 
 <script>
 import Header from '../components/Header.vue';
+import SingleCardPreview from '../components/SingleCardPreview.vue';
+import getData from '../composables/getData';
+import { computed } from 'vue';
+
 export default {
   name: 'HomeView',
-  components: { Header },
+  components: { Header, SingleCardPreview },
+  setup() {
+    const { places, error, load } = getData();
+
+    load();
+
+    const favouritePlaces = computed(() => {
+      return places.value.filter((p) => p.favourite === true);
+    });
+    console.log(favouritePlaces);
+    return { favouritePlaces, error };
+  },
 };
 </script>

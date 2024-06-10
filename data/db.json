@@ -6,7 +6,9 @@
       "title-jp": "富山市",
       "prefecture": "Toyama",
       "island": "Honsiu",
-      "images": [""],
+      "images": [
+        "https://media.istockphoto.com/id/1280746727/pl/zdj%C4%99cie/toyama-japonia-skyline.jpg?s=612x612&w=0&k=20&c=z8RJKJ2u5JQYbw6S84cTb0pGcCLbRY046o1MSQelU6E="
+      ],
       "famousFor": [
         {
           "name": "hotaruika",
@@ -16,7 +18,7 @@
       ],
       "about": "",
       "whenBestToVisit": "All seasons",
-      "favourite": false,
+      "favourite": true,
       "tags": ["honsiu", "Toyama"],
       "comments": [
         {
@@ -33,7 +35,9 @@
       "title-jp": "",
       "prefecture": "Tokyo",
       "island": "",
-      "images": [""],
+      "images": [
+        "https://media.istockphoto.com/id/1168777717/pl/zdj%C4%99cie/magome-juku-miasto-o-wschodzie-s%C5%82o%C5%84ca-na-wiosn%C4%99.jpg?s=612x612&w=0&k=20&c=r2U68TgbbizKwtTuhY8ZZY14O7GwlaSXcnapLlvUzto="
+      ],
       "famousFor": [
         {
           "name": "85km trail",
