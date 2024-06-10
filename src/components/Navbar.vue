@@ -23,12 +23,6 @@ nav {
   margin: 0 auto;
   border-radius: 0 0 10px 10px;
 }
-a {
-  color: rgb(246, 246, 247);
-  opacity: 0.7;
-  text-decoration: none;
-  margin: 0 10px;
-}
 
 nav a {
   color: rgb(246, 246, 247);

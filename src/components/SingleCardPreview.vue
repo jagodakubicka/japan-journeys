@@ -1,7 +1,12 @@
 <template>
   <router-link :to="{ name: 'destination', params: { id: place.id } }">
     <div class="card">
-      <div class="card-content">{{ place.title }}</div>
+      <div class="card-content">
+        <h3 class="card-title">{{ place.title }}</h3>
+        <div class="card-tags">
+          <p v-for="tag in place.tags" :key="tag">#{{ tag }}</p>
+        </div>
+      </div>
       <img :src="previewImg" :alt="place.title" />
     </div>
   </router-link>
@@ -22,6 +27,12 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color: rgb(246, 246, 247);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
 .card {
   width: 300px;
   height: 200px;
@@ -52,14 +63,25 @@ export default {
     rgba(0, 0, 0, 0.1) 87%
   );
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem;
   border-radius: inherit;
 }
-
+.card-title {
+  color: white;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.card-tags {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+}
 @media (min-width: 998px) {
   .card {
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
   }
 }
 </style>
