@@ -1,8 +1,10 @@
 <template>
-  <div class="card">
-    <div class="card-content">{{ place.title }}</div>
-    <img :src="previewImg" :alt="place.title" />
-  </div>
+  <router-link :to="{ name: 'destination', params: { id: place.id } }">
+    <div class="card">
+      <div class="card-content">{{ place.title }}</div>
+      <img :src="previewImg" :alt="place.title" />
+    </div>
+  </router-link>
 </template>
 
 <script>
