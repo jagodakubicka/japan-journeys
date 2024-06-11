@@ -4,7 +4,9 @@
       <div class="card-content">
         <h3 class="card-title">{{ place.title }}</h3>
         <div class="card-tags">
-          <p v-for="tag in place.tags" :key="tag">#{{ tag }}</p>
+          <div v-for="tag in place.tags" :key="tag" class="card-tag">
+            #{{ tag }}
+          </div>
         </div>
       </div>
       <img :src="previewImg" :alt="place.title" />
@@ -28,7 +30,7 @@ export default {
 
 <style scoped>
 a {
-  color: rgb(246, 246, 247);
+  color: var(--white-color);
   text-decoration: none;
   margin: 0 10px;
 }
@@ -67,7 +69,7 @@ a {
   border-radius: inherit;
 }
 .card-title {
-  color: white;
+  color: var(--white-color);
   text-align: left;
   margin: 0;
   padding: 0;
@@ -77,6 +79,9 @@ a {
   gap: 0.4rem;
   padding: 0;
   margin: 0;
+}
+.card-tag {
+  opacity: 0.6;
 }
 @media (min-width: 998px) {
   .card {

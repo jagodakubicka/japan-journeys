@@ -32,13 +32,4 @@ export default {
   align-items: center;
   gap: 2rem;
 }
-.cards-list__item:nth-child(even) {
-  transform: translateY(0);
-}
-
-@media (min-width: 678px) {
-  .cards-list__item:nth-child(even) {
-    transform: translateY(-1.5rem);
-  }
-}
 </style>

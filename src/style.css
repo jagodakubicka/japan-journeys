@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --primary-color: #1c7eb6;
+  --primary-dark-color: #272747;
+  --primary-light-color: #64aada;
+  --secondary-color: #ba3a47;
+  --white-color: #fdfdfd;
+  --black-color: #080814;
+  --brand-font: 'Dela Gothic One', sans-serif;
+  --regular-font: 'Noto Sans JP', sans-serif;
+
+  --primary-gradient: linear-gradient(
+    348deg,
+    rgba(28, 126, 182, 1) 0%,
+    rgba(32, 32, 59, 0.4318102240896359) 100%
+  );
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #272747;
+  color: var(--white-color);
+  background-color: var(--primary-dark-color);
+  font-family: var(--regular-font);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,13 +33,21 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: #272747;
-  color: #f2f2f2;
+  background: var(--primary-dark-color);
+  color: var(--white-color);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  line-height: 1.5;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--brand-font);
 }
 
 #app {
@@ -33,4 +55,19 @@ h1 {
   margin: 0 auto;
 
   text-align: center;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  width: max-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.button-primary:hover {
+}
+.button-primary a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-family: var(--brand-font);
 }

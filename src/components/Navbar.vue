@@ -1,7 +1,6 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link>
-    <router-link :to="{ name: 'about' }">About</router-link>
     <router-link :to="{ name: 'destinations' }">Destinations</router-link>
   </nav>
 </template>
@@ -13,10 +12,11 @@ export default {};
 <style>
 nav {
   position: fixed;
+  z-index: 100;
   right: 0;
   left: 0;
   padding: 1rem;
-  background: rgba(250, 250, 250, 0.35);
+  background: rgba(93, 93, 93, 0.35);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   max-width: 600px;
@@ -25,6 +25,7 @@ nav {
 }
 
 nav a {
+  font-family: var(--brand-font);
   color: rgb(246, 246, 247);
   opacity: 0.7;
   text-decoration: none;
