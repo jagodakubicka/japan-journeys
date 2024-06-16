@@ -36,9 +36,8 @@ a {
 }
 
 .card {
-  width: 300px;
-  height: 200px;
-  border-radius: 1rem;
+  width: 200px;
+  height: 300px;
   position: relative;
   z-index: 0;
   display: flex;
@@ -82,6 +81,7 @@ a {
 }
 .card-tag {
   opacity: 0.6;
+  font-size: 0.8rem;
 }
 @media (min-width: 998px) {
   .card {

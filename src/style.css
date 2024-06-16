@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 :root {
-  --primary-color: #1c7eb6;
-  --primary-dark-color: #272747;
-  --primary-light-color: #64aada;
-  --secondary-color: #ba3a47;
+  --primary-color: #bb3d26;
+  --primary-dark-color: #331717;
+  --primary-light-color: #da8964;
+  --secondary-color: #eeb226;
   --white-color: #fdfdfd;
-  --black-color: #080814;
+  --black-color: #140808;
   --brand-font: 'Dela Gothic One', sans-serif;
   --regular-font: 'Noto Sans JP', sans-serif;
 
   --primary-gradient: linear-gradient(
     348deg,
-    rgba(28, 126, 182, 1) 0%,
-    rgba(32, 32, 59, 0.4318102240896359) 100%
+    rgb(99, 41, 30) 0%,
+    rgba(59, 34, 32, 0.432) 100%
   );
   --secondary-gradient: linear-gradient(
     0deg,
@@ -23,8 +23,8 @@
   );
   --dark-gradient: linear-gradient(
     0deg,
-    rgba(13, 13, 24, 1) 0%,
-    rgba(48, 48, 87, 1) 100%
+    rgb(37, 30, 28) 0%,
+    rgb(42, 30, 30) 100%
   );
 
   color-scheme: light dark;
@@ -66,14 +66,12 @@ img {
   max-height: 100%;
 }
 #app {
-  max-width: 1280px;
   margin: 0 auto;
 
   text-align: center;
 }
 
 .button-primary {
-  background-color: var(--primary-color);
   width: max-content;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;

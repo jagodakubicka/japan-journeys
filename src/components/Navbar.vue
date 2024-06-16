@@ -1,7 +1,12 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    <router-link :to="{ name: 'destinations' }">Destinations</router-link>
+    <div class="logo-wrapper">
+      <router-link to="/">Japan Journeys</router-link>
+    </div>
+    <div class="link-wrapper">
+      <router-link to="/">Home</router-link>
+      <router-link :to="{ name: 'destinations' }">Destinations</router-link>
+    </div>
   </nav>
 </template>
 
@@ -16,12 +21,19 @@ nav {
   right: 0;
   left: 0;
   padding: 1rem;
-  background: rgba(93, 93, 93, 0.35);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  max-width: 600px;
+  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
-  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a {
@@ -35,5 +47,11 @@ nav a {
 nav a.router-link-exact-active {
   font-weight: bold;
   opacity: 1;
+}
+
+@media (min-width: 678px) {
+  .link-wrapper {
+    flex-direction: row;
+  }
 }
 </style>
