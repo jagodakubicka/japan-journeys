@@ -1,11 +1,21 @@
 <template>
   <section class="hero">
+    <div class="hero-circle"></div>
     <h1 ref="text" id="hero-header">Japan Journeys</h1>
+    <a class="hero-link" href="#about">
+      <div class="hero-link__circle">
+        <FontAwesomeIcon :icon="faArrowDownLong" />
+      </div>
+      <p>explore</p>
+    </a>
   </section>
 </template>
 
 <script>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+
 export default {
   setup() {
     const text = ref(null);
@@ -28,6 +38,8 @@ export default {
 
     return {
       text,
+      FontAwesomeIcon,
+      faArrowDownLong,
     };
   },
 };
@@ -46,15 +58,38 @@ export default {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  border-image: fill 1
+    linear-gradient(0deg, rgba(29, 29, 29, 1) 0%, rgba(48, 48, 87, 0) 50%);
 }
-.hero::before {
-  content: '';
+.hero-circle {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to top, rgb(24, 15, 13), transparent);
-  z-index: 100;
+  z-index: 0;
+  width: 200px;
+  height: 200px;
+  background: #bf2222b4;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-link {
+  position: absolute;
+  z-index: 0;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white-color);
+}
+.hero-link__circle {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  border-radius: 50%;
 }
 .hero img {
   position: absolute;
@@ -64,42 +99,28 @@ export default {
   height: 100%;
   object-fit: cover;
 }
-.hero img#level-1 {
-  display: none;
-  z-index: 10;
-}
-.hero img#level-2 {
-  display: none;
-  z-index: 9;
-}
-.hero img#level-3 {
-  z-index: 8;
-}
-.hero img#level-4 {
-  z-index: 7;
-}
-.hero img#fuji {
-  z-index: 6;
-}
-.hero img#clouds {
-  z-index: 5;
-}
+
 #hero-header {
   position: absolute;
   white-space: nowrap;
   z-index: 9;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
 }
 
 @media (min-width: 678px) {
-  .hero img#level-1 {
-    display: block;
+  .hero {
+    background-position: center;
   }
-  .hero img#level-2 {
-    display: block;
+  .hero-circle {
+    height: 300px;
+    width: 300px;
   }
+  .hero-link {
+    bottom: 5%;
+  }
+
   #hero-header {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }
 </style>

@@ -1,5 +1,7 @@
 <template>
-  <div class="footer"></div>
+  <div class="footer">
+    <p>Coded by Jagoda Kubicka</p>
+  </div>
 </template>
 
 <script>
@@ -10,9 +12,12 @@ export default {};
 .footer {
   width: 100%;
   min-height: 200px;
-  background: rgb(28, 126, 182);
-  background: var(--primary-gradient);
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
-.footer-img svg {
+.footer p {
+  font-size: 0.7rem;
 }
 </style>

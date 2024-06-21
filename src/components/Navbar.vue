@@ -1,11 +1,13 @@
 <template>
   <nav>
-    <div class="logo-wrapper">
-      <router-link to="/">Japan Journeys</router-link>
-    </div>
-    <div class="link-wrapper">
-      <router-link to="/">Home</router-link>
-      <router-link :to="{ name: 'destinations' }">Destinations</router-link>
+    <div class="container-wrapper">
+      <div class="logo-wrapper">
+        <router-link to="/">Japan Journeys</router-link>
+      </div>
+      <div class="link-wrapper">
+        <router-link to="/">Home</router-link>
+        <router-link :to="{ name: 'destinations' }">Destinations</router-link>
+      </div>
     </div>
   </nav>
 </template>
@@ -14,13 +16,18 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 nav {
   position: fixed;
+  width: 100%;
   z-index: 100;
   right: 0;
   left: 0;
   padding: 1rem;
+  border-image: fill 1
+    linear-gradient(180deg, rgba(29, 29, 29, 0.7) 40%, rgba(48, 48, 87, 0) 100%);
+}
+.container-wrapper {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;

@@ -16,9 +16,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.header img {
-  width: 100%;
-  object-fit: cover;
+  border-image: fill 1
+    linear-gradient(0deg, rgba(29, 29, 29, 1) 0%, rgba(48, 48, 87, 0) 90%);
 }
 </style>
